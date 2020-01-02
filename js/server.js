@@ -24,7 +24,7 @@ var Server = function(config, callback) {
 
 	console.log("Starting server on port " + port + " ... ");
 
-	server.listen(port, config.address ? config.address : "localhost");
+	server.listen(port, config.address ? config.address : null);
 
 	if (config.ipWhitelist instanceof Array && config.ipWhitelist.length === 0) {
 		console.info(Utils.colors.warn("You're using a full whitelist configuration to allow for all IPs"));

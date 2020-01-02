@@ -180,9 +180,9 @@ Module.register("weatherforecast",{
 					rainCell.innerHTML = "";
 				} else {
 					if(config.units !== "imperial") {
-						rainCell.innerHTML = parseFloat(forecast.rain).toFixed(1).replace(".", this.config.decimalSymbol) + " mm";
+						rainCell.innerHTML = parseFloat(forecast.rain).toFixed(1) + " mm";
 					} else {
-						rainCell.innerHTML = (parseFloat(forecast.rain) / 25.4).toFixed(2).replace(".", this.config.decimalSymbol) + " in";
+						rainCell.innerHTML = (parseFloat(forecast.rain) / 25.4).toFixed(2) + " in";
 					}
 				}
 				rainCell.className = "align-right bright rain";

@@ -39,13 +39,11 @@ var MM = (function() {
 			dom.opacity = 0;
 			wrapper.appendChild(dom);
 
-			var moduleHeader = document.createElement("header");
-			moduleHeader.innerHTML = module.getHeader();
-			moduleHeader.className = "module-header";
-			dom.appendChild(moduleHeader);
-
-			if (typeof module.getHeader() === "undefined" || module.getHeader() !== "") {
-				moduleHeader.style = "display: none;";
+			if (typeof module.getHeader() !== "undefined" && module.getHeader() !== "") {
+				var moduleHeader = document.createElement("header");
+				moduleHeader.innerHTML = module.getHeader();
+				moduleHeader.className = "module-header";
+				dom.appendChild(moduleHeader);
 			}
 
 			var moduleContent = document.createElement("div");
@@ -212,8 +210,9 @@ var MM = (function() {
 		contentWrapper[0].innerHTML = "";
 		contentWrapper[0].appendChild(newContent);
 
-		headerWrapper[0].innerHTML = newHeader;
-		headerWrapper[0].style = headerWrapper.length > 0 && newHeader ? undefined : "display: none;";
+		if( headerWrapper.length > 0 && newHeader) {
+			headerWrapper[0].innerHTML = newHeader;
+		}
 	};
 
 	/* hideModule(module, speed, callback)

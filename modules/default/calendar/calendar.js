@@ -180,7 +180,6 @@ Module.register("calendar", {
 
 					dateCell.colSpan = "3";
 					dateCell.innerHTML = dateAsString;
-					dateCell.style.paddingTop = "10px";
 					dateRow.appendChild(dateCell);
 					wrapper.appendChild(dateRow);
 

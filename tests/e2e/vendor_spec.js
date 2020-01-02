@@ -35,10 +35,7 @@ describe("Vendors", function () {
 			it(`should return 200 HTTP code for vendor "${vendor}"`, function () {
 				urlVendor = "http://localhost:8080/vendor/" + vendors[vendor];
 				request.get(urlVendor, function (err, res, body) {
-					if (!err)
-						expect(res.statusCode).to.equal(200);
-					else
-						mlog.pending(`There error vendor 200 test ${err}`);						
+					expect(res.statusCode).to.equal(200);
 				});
 			});
 		});

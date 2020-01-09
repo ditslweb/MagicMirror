@@ -12,22 +12,22 @@ Module.register("compliments", {
 	defaults: {
 		compliments: {
 			anytime: [
-				"Hey there sexy!"
+				"Read Me ;)"
 			],
 			morning: [
-				"Good morning, handsome!",
-				"Enjoy your day!",
-				"How was your sleep?"
+				"Good morning, x",
+				"Coffee and Cake, no Biscuit!",
+				"The early bird catches the worm!"
 			],
 			afternoon: [
-				"Hello, beauty!",
-				"You look sexy!",
-				"Looking good today!"
+				"Anything happening tonight?",
+				"Dad is almost out of work!",
+				"You deserve a cookie"
 			],
 			evening: [
-				"Wow, you look hot!",
-				"You look nice!",
-				"Hi, sexy!"
+				"Check me out!",
+				"I wonder whats happening tomorrow?",
+				"Hi!"
 			]
 		},
 		updateInterval: 30000,
